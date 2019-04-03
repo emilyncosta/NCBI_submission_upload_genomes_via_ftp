@@ -125,6 +125,7 @@ for a_file in genome_list:
         ftp.storbinary('STOR %s' % f.name , f)
 
 print("\n\n###\n\nList of all Genomes uploaded via FTP:\n\n ")
+
 for f in ftp.nlst():
     print(f)
 
