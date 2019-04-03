@@ -107,16 +107,16 @@ genome_list = [
 
 
 
-ftp = ftplib.FTP("ftp-private.ncbi.nlm.nih.gov", "", "")
+ftp = ftplib.FTP("ftp-private.ncbi.nlm.nih.gov", "subftp", "w4pYB9VQ")
 
 
 
-# ftp.cwd("")
-# ftp.mkd("")
+# ftp.cwd("uploads/lizaspinasse_gmail.com_ojGYyyaI")
+# ftp.mkd("WGSMTB")
 
 
 
-ftp.cwd("")
+ftp.cwd("uploads/lizaspinasse_gmail.com_ojGYyyaI/WGSMTB")
 
 
 for a_file in genome_list:
