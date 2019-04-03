@@ -5,7 +5,7 @@ import sys
 
 
 genome_list = [
-#"MTB1.1.fastq.gz",
+"MTB1.1.fastq.gz",
 "MTB8.1.fastq.gz",
 "MTB16.1.fastq.gz",
 "MTB24.1.fastq.gz",
@@ -107,9 +107,16 @@ genome_list = [
 
 
 
-ftp = ftplib.FTP("ftp-private.ncbi.nlm.nih.gov", "subftp", "w4pYB9VQ")
+ftp = ftplib.FTP("ftp-private.ncbi.nlm.nih.gov", "", "")
 
-ftp.cwd("uploads/lizaspinasse_gmail.com_ojGYyyaI/WGSMTB")
+
+
+# ftp.cwd("")
+# ftp.mkd("")
+
+
+
+ftp.cwd("")
 
 
 for a_file in genome_list:
@@ -117,12 +124,9 @@ for a_file in genome_list:
         ftp.storbinary('STOR %s' % f , f)
     print("\n@@@@\n\n=> ", f,"\n@@@")
 
+# ftp.nlst()
+
 ftp.quit()
 
 ####
-
-#ftp.mkd("WGSMTB")
-
-#ftp.nlst()
-
 
