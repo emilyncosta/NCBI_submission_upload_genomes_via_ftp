@@ -130,5 +130,9 @@ for f in ftp.nlst():
 
 ftp.quit()
 
+
+
+print("\n\n$$$\n\nDONE\n\n$$$")
+
 ####
 
