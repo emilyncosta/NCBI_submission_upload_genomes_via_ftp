@@ -107,7 +107,7 @@ genome_list = [
 
 
 
-ftp = ftplib.FTP("ftp-private.ncbi.nlm.nih.gov", "subftp", "w4pYB9VQ")
+ftp = ftplib.FTP("ftp-private.ncbi.nlm.nih.gov", username, password)
 
 
 
