@@ -5,32 +5,27 @@ A python3 program to upload genomes via FTP
 # Usage
 
 ```bash
-> python3 ./upload_liz_genomes.py
+> python3 ./upload_liz_genomes.py -e "" -u "" -p "" -f""
+
+```
+Where -e, -u, -p and -f are named arguments. 
+
+  -f F, -folder F     Folder containing all files
+  -e E, -extension E  File extension from files
+  -u U, -username U   NCBI - Username
+  -p P, -password P   NCBI - Password
+  
+You can also use this code for help
+  ```bash
+> python3 ./upload_liz_genomes.py -h
 
 ```
 
 # Explanation 
 
-1. List of names of genomes to be uploaded
 
-```
 
-genome_list = [
-"MTB1.1.fastq.gz",
-"MTB8.1.fastq.gz",
-"MTB16.1.fastq.gz"
-]
-```
-
-2. Update the `username` and `password` 
-
-```
-
-ftp = ftplib.FTP("ftp-private.ncbi.nlm.nih.gov", username, password)
-
-```
-
-3. Create a directory using FTP, once you've logged in and you have your own address like `emilyncosta_gmail.com_xxxxx` and create a directory where you'll upload submission `africanum`
+1. Create a directory using FTP, once you've logged in and you have your own address like `emilyncosta_gmail.com_xxxxx` and create a directory where you'll upload submission `africanum`
 
 ```
 ftp.cwd("uploads/lizaspinasse_gmail.com_ojGYyyaI")
@@ -38,7 +33,7 @@ ftp.mkd("africanum")
 
 ```
 
-4. Change the location of the directory 
+2. Change the location of the directory 
 
 ```
 ftp.cwd("uploads/lizaspinasse_gmail.com_ojGYyyaI/WGSMTB")
@@ -52,7 +47,7 @@ ftp.cwd("uploads/emilyncosta_gmail.com_xxxx/africanum")
 ```
 
 
-5. The next code is uploading the file one by one 
+3. The next code is uploading the file one by one 
 
 ```python
 
@@ -65,7 +60,7 @@ for a_file in genome_list:
 
 ```
 
-6. As a confirmation, after everything is uploaded we confirm from the server 
+4. As a confirmation, after everything is uploaded we confirm from the server 
 
 ```
 
@@ -76,7 +71,7 @@ for f in ftp.nlst():
 
 ```
 
-7. We close the FTP connection
+5. We close the FTP connection
 
 ```
 ftp.quit()
