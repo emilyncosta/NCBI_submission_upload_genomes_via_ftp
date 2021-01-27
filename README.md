@@ -10,7 +10,7 @@ A python3 program to upload genomes via FTP
 ```
 ## Where -e, -u, -p and -f are named arguments. 
 
-  ### f F, -folder F     Folder containing all files
+  ### -f F, -folder F     Folder containing all files
   ### -e E, -extension E  File extension from files
   ### -u U, -username U   NCBI - Username
   ### -p P, -password P   NCBI - Password
