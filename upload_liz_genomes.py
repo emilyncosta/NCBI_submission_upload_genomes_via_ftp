@@ -5,7 +5,7 @@ import os
 
 # 1. List of names of genomes to be uploaded
 
-genome_list = [ i for i in os.listdir(sys.argv[1] if "fastq.gz" in list(i))]
+genome_list = [ i for i in os.listdir(sys.argv[1]) if "fastq.gz" in i]
 
 
 """
