@@ -10,7 +10,7 @@ parser.add_argument("-f","-folder",action='store', help="Folder containing all f
 parser.add_argument("-e","-extension",action="store", help= "File extension from files",required = False, default="fastq.gz")
 parser.add_argument("-u","-username",action='store', help="NCBI - Username",required = True)
 parser.add_argument("-p","-password",action='store', help= "NCBI - Password",required = True)
-
+parser.add_argument("-d","-ftpdir",action='store', help= "The directory on the NCBI server",required = True)
 args = parser.parse_args()
 
 file_ext = args.e
@@ -69,4 +69,3 @@ ftp.quit()
 print("\n\n$$$\n\nDONE\n\n$$$")
 
 ####
-
