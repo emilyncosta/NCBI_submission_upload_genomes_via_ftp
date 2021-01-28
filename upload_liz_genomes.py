@@ -17,6 +17,7 @@ file_ext = args.e
 foldername = args.f
 username = args.u
 password = args.p
+dir_name = args.d
 
 
 
@@ -37,13 +38,13 @@ ftp = ftplib.FTP("ftp-private.ncbi.nlm.nih.gov", username, password)
 4. Create a directory using FTP, once you've logged in and you have your own address like `emilyncosta_gmail.com_xxxxx` and create a directory where you'll upload submission `africanum`
 """
 
-ftp.cwd("uploads/lizaspinasse_gmail.com_ojGYyyaI")
-ftp.mkd("WGSMTB")
+ftp.cwd("uploads/"+dir_name)
+ftp.mkd(foldername)
 
 
 # 5. Change the location of the directory 
 
-ftp.cwd("uploads/lizaspinasse_gmail.com_ojGYyyaI/WGSMTB")
+ftp.cwd("uploads/"+dir_name+"/"+foldername)
 
 # 6. The next code is uploading the file one by one 
 
