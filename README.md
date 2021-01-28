@@ -10,11 +10,12 @@ A python3 program to upload genomes via FTP
 ```
 ## Where -e, -u, -p and -f are named arguments. 
 
-  ### -f F, -folder F    -> Folder containing all files
-  ### -e E, -extension E -> File extension from files
-  ### -u U, -username U  -> NCBI - Username
-  ### -p P, -password P  -> NCBI - Password
-  
+ -f F, -folder F    -> Folder containing all files\
+ -e E, -extension E -> File extension from files\
+ -u U, -username U  -> NCBI - Username\
+ -p P, -password P  -> NCBI - Password\
+ -d D, -ftpdir D -> Directory name inside /uploads on NCBI server
+   
 ## You can also use this code for help
   ```bash
 > python3 ./upload_liz_genomes.py -h
